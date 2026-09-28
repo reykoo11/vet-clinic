@@ -8,9 +8,9 @@ const SERVICES = [
 ];
 
 const DOCTORS = [
-  { name: "Сергей", role: "Терапевт", exp: "Опыт 9 лет" },
-  { name: "Наталья", role: "Хирург", exp: "Опыт 12 лет" },
-  { name: "Тимур", role: "Дерматолог", exp: "Опыт 6 лет" },
+  { name: "Сергей", role: "Терапевт", exp: "Опыт 9 лет", photo: "assets/doctor-1.jpg" },
+  { name: "Наталья", role: "Хирург", exp: "Опыт 12 лет", photo: "assets/doctor-2.jpg" },
+  { name: "Тимур", role: "Дерматолог", exp: "Опыт 6 лет", photo: "assets/doctor-3.jpg" },
 ];
 
 const SLOTS = [
@@ -43,7 +43,7 @@ function renderServices() {
 function renderDoctors() {
   renderList("doctorsGrid", DOCTORS, (d, i) => `
     <div class="doctor-card reveal" role="listitem" style="--reveal-delay:${i * 0.08}s">
-      <div class="doctor-card__avatar">${d.name[0]}</div>
+      <div class="doctor-card__avatar"><img src="${d.photo}" alt="${d.name}" loading="lazy" /></div>
       <h3 class="doctor-card__name">${d.name}</h3>
       <p class="doctor-card__role">${d.role}</p>
       <p class="doctor-card__exp">${d.exp}</p>
