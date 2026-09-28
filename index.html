@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ДобрыйДоктор — ветеринарная клиника</title>
+  <meta name="description" content="Приём ветеринарного врача, вакцинация, анализы, стоматология и экстренная помощь животным. Запись онлайн." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230D9488'/%3E%3Cpath d='M32 20c-6 0-10 5-10 12 0 8 6 12 10 12s10-4 10-12c0-7-4-12-10-12z' fill='white' fill-opacity='.15'/%3E%3Cpath d='M22 20a4 4 0 118 0M34 20a4 4 0 118 0' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='34' r='9' fill='white' fill-opacity='.9'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="emergency-bar">
+    <div class="container emergency-bar__inner">
+      <span><i class="ph ph-first-aid-kit" aria-hidden="true"></i> Экстренная помощь 24/7:</span>
+      <a href="tel:+70009998877">+7 (000) 999-88-77</a>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">Добрый<span class="logo__accent">Доктор</span></a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#services" class="nav__link">Услуги и цены</a></li>
+          <li><a href="#doctors" class="nav__link">Врачи</a></li>
+          <li><a href="#booking" class="nav__link">Онлайн-запись</a></li>
+          <li><a href="#contact" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#booking" class="btn btn--primary btn--sm">Записать питомца</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <i class="ph ph-list" id="menuIconOpen" aria-hidden="true"></i>
+          <i class="ph ph-x" id="menuIconClose" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="badge"><i class="ph ph-paw-print" aria-hidden="true"></i> Более 8 000 питомцев на учёте</span>
+          <h1 class="hero__title">Заботимся о вашем питомце <span class="text-accent">как о своём</span></h1>
+          <p class="hero__subtitle">
+            Осмотр, вакцинация, анализы и стоматология — приём у опытных врачей.
+            Срочная помощь работает круглосуточно.
+          </p>
+          <div class="hero__actions">
+            <a href="#booking" class="btn btn--primary btn--lg">Записать питомца <i class="ph ph-calendar-check" aria-hidden="true"></i></a>
+            <a href="#contact" class="btn btn--outline btn--lg">Адрес и часы работы</a>
+          </div>
+          <div class="hero__meta">
+            <div><i class="ph ph-map-pin" aria-hidden="true"></i> ул. Примерная, 12</div>
+            <div><i class="ph ph-clock" aria-hidden="true"></i> Пн–Вс: 8:00–22:00</div>
+          </div>
+        </div>
+        <div class="hero__visual reveal" style="--reveal-delay:.15s">
+          <div class="hero__card">
+            <div class="hero__card-row"><i class="ph ph-stethoscope" aria-hidden="true"></i> Осмотр и консультация</div>
+            <div class="hero__card-row"><i class="ph ph-syringe" aria-hidden="true"></i> Вакцинация</div>
+            <div class="hero__card-row"><i class="ph ph-test-tube" aria-hidden="true"></i> Анализы</div>
+            <div class="hero__card-row"><i class="ph ph-tooth" aria-hidden="true"></i> Стоматология</div>
+            <div class="hero__card-row hero__card-row--urgent"><i class="ph ph-first-aid-kit" aria-hidden="true"></i> Экстренная помощь</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Услуги и цены</p>
+        <h2 class="section-title reveal" id="services-title">Приём и диагностика</h2>
+        <p class="section-subtitle reveal">Стоимость приёма фиксированная, без доплат за консультацию.</p>
+        <div class="grid grid--4" id="servicesGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section class="section section--alt" id="doctors" aria-labelledby="doctors-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Врачи</p>
+        <h2 class="section-title reveal" id="doctors-title">Наши специалисты</h2>
+        <p class="section-subtitle reveal">Опыт от 5 лет, ежегодное повышение квалификации.</p>
+        <div class="grid grid--3" id="doctorsGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section" id="booking" aria-labelledby="booking-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Онлайн-запись</p>
+        <h2 class="section-title reveal" id="booking-title">Записать питомца на приём</h2>
+        <p class="section-subtitle reveal">Выберите услугу, врача и свободное время.</p>
+
+        <form class="booking reveal" id="bookingForm" novalidate>
+          <div class="booking__step">
+            <label for="bookService">1. Услуга</label>
+            <select id="bookService"></select>
+          </div>
+          <div class="booking__step">
+            <label for="bookDoctor">2. Врач</label>
+            <select id="bookDoctor"></select>
+          </div>
+          <div class="booking__step">
+            <label>3. Свободное время сегодня</label>
+            <div class="slots" id="slotsGrid" role="listbox" aria-label="Свободное время"></div>
+            <input type="hidden" id="bookSlot" />
+            <span class="form-error" id="slotError" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="petName">Имя питомца</label>
+            <input type="text" id="petName" required />
+            <span class="form-error" id="petNameError" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="clientPhone">Ваш телефон</label>
+            <input type="tel" id="clientPhone" placeholder="+7 (___) ___-__-__" required />
+            <span class="form-error" id="clientPhoneError" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Записать <i class="ph ph-check-circle" aria-hidden="true"></i></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Контакты</p>
+        <h2 class="section-title reveal" id="contact-title">Как нас найти</h2>
+        <div class="contact-grid reveal">
+          <div class="contact-card">
+            <i class="ph ph-map-pin" aria-hidden="true"></i>
+            <h3>Адрес</h3>
+            <p>ул. Примерная, 12, Алматы</p>
+          </div>
+          <div class="contact-card">
+            <i class="ph ph-clock" aria-hidden="true"></i>
+            <h3>Часы работы</h3>
+            <p>Пн–Вс: 8:00–22:00</p>
+          </div>
+          <div class="contact-card contact-card--urgent">
+            <i class="ph ph-first-aid-kit" aria-hidden="true"></i>
+            <h3>Экстренная помощь</h3>
+            <p><a href="tel:+70009998877">+7 (000) 999-88-77</a> — круглосуточно</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> ДобрыйДоктор. Ветеринарная клиника.</p>
+      <button class="back-to-top" id="backToTop" type="button" aria-label="Наверх"><i class="ph ph-arrow-up" aria-hidden="true"></i></button>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
